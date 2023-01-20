@@ -3,9 +3,11 @@
   /* font family */
   --font-family: "Verdana", sans-serif;
   /* colours */
-  --colour-text: white;
+  --heading-colour: white;
+  --text-colour: gray;
   --bg-colour: black;
   --link-colour: aquamarine;
+  --link-hover-colour: yellow;
 }
 
 /* resets and defaults */
@@ -16,14 +18,110 @@
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 body {
   background-color: var(--bg-colour);
-  color: var(--colour-text);
+  color: var(--text-colour);
   font-family: var(--font-family);
-  font-size: 16px;
+  font-size: 21px;
   font-weight: 400;
   line-height: 1.5;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+h1,
+h2 {
+  color: var(--heading-colour);
+}
+
+h1 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: clamp(30px, 3.3vw, 150px);
+  font-weight: normal;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: clamp(28px, 2.7vw, 100px);
+}
+
+p {
+  font-size: clamp(16px, 1.4vw, 60px);
+}
+
+a {
+  color: var(--link-colour);
+  transition: 0.5s color ease-in-out;
+}
+
+a:hover {
+  color: var(--link-hover-colour);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.an-image {
+  margin: 0;
+}
+
+.link-download {
+  font-size: clamp(16px, 1.1vw, 50px);
+}
+
+/* header */
+header {
+  text-align: center;
+}
+
+.a-video {
+  margin: 0;
+  margin-left: 0.5rem;
+}
+
+/* main */
+main {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+}
+
+/* about section */
+.about .an-image {
+  margin-bottom: 1rem;
+}
+
+/* download section */
+
+/* footer */
+.copyright {
+  text-align: right;
+  margin-right: 1rem;
+}
+
+/* media queries */
+@media screen and (max-width: 600px) {
+  .a-video {
+    max-width: 16rem;
+  }
+
+  .download img {
+    max-width: 2.5rem;
+  }
 }
