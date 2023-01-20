@@ -1,0 +1,29 @@
+/* variables */
+:root {
+  /* font family */
+  --font-family: "Verdana", sans-serif;
+  /* colours */
+  --colour-text: white;
+  --bg-colour: black;
+  --link-colour: aquamarine;
+}
+
+/* resets and defaults */
+* {
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-colour);
+  color: var(--colour-text);
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
