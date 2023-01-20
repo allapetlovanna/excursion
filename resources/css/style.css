@@ -115,7 +115,7 @@ main {
   margin-right: 1rem;
 }
 
-/* media query */
+/* media queries */
 @media screen and (max-width: 600px) {
   .a-video {
     max-width: 16rem;
